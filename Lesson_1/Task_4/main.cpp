@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    float zarpl;
+    float zarpl = 0;
     cout << "How much do you earn in dollars?" << endl;
     cin >> zarpl;
     if (zarpl < 1000) {

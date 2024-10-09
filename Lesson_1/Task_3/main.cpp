@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    float ch1,ch2; char diya;
+    float ch1,ch2 = 0; char diya = 0;
     cout << "Enter the first number:" << endl;
     cin >> ch1;
     cout << "Enter the second number:" << endl;

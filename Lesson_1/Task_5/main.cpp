@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    int kilkist;
+    int kilkist = 0;
     cout << "Enter a number that will be equal to the number of rows of the Christmas tree" << endl;
     cin >> kilkist;
     for(int i=0; i<kilkist; i++){
