@@ -7,17 +7,17 @@ int main()
     int kilkist = 0;
     cout << "Enter a number that will be equal to the number of rows of the Christmas tree" << endl;
     cin >> kilkist;
-    for(int i=0; i<kilkist; i++){
-        for(int j=1; j<kilkist-i;j++){
+    for(int stowpci=0; stowpci<kilkist; stowpci++){
+        for(int vidstyp=1; vidstyp<kilkist-stowpci;vidstyp++){
              cout << " ";}
-        for(int j=1; j<=2*(i+1)-1;j++){
+        for(int ryadki=1; ryadki<=2*(stowpci+1)-1;ryadki++){
             cout << "*";}
         cout << "\n";}
     if(kilkist > 1) {
-    int j=1;
-    while(j<kilkist){ //Використав while замість for, щоб було різноманіття
+    int nishka=1;
+    while(nishka<kilkist){ //Використав while замість for, щоб було різноманіття
         cout << " ";
-        j++;}
+        nishka++;}
     cout << "*\n";}
     return 0;
 }
