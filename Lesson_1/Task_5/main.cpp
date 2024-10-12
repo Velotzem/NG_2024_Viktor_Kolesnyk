@@ -9,15 +9,15 @@ int main()
     cin >> kilkist;
     for(int stowpci=0; stowpci<kilkist; stowpci++){
         for(int vidstyp=1; vidstyp<kilkist-stowpci;vidstyp++){
-             cout << " ";}
+            cout << " ";}
         for(int ryadki=1; ryadki<=2*(stowpci+1)-1;ryadki++){
             cout << "*";}
         cout << "\n";}
     if(kilkist > 1) {
-    int nishka=1;
-    while(nishka<kilkist){ //Used "while" instead of "for" for variety
-        cout << " ";
-        nishka++;}
-    cout << "*\n";}
+        int nishka=1;
+        while(nishka<kilkist){ //Used "while" instead of "for" for variety
+            cout << " ";
+            nishka++;}
+        cout << "*\n";}
     return 0;
 }
