@@ -15,7 +15,7 @@ int main()
         cout << "\n";}
     if(kilkist > 1) {
     int nishka=1;
-    while(nishka<kilkist){ //Використав while замість for, щоб було різноманіття
+    while(nishka<kilkist){ //Used "while" instead of "for" for variety
         cout << " ";
         nishka++;}
     cout << "*\n";}
