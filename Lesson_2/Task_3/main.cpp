@@ -19,7 +19,7 @@ int main()
     }
     cout << endl;
     for (int stowp=0;stowp<real_mas;stowp++){
-        for (int propysk=0;propysk<(max-massive[stowp])/2;propysk++){ //Numbers cannot always make the same number of spaces on the left and right, so in such cases there will be 1 more on the left
+        for (int propysk=0;propysk<(max-massive[stowp])/2;propysk++){ //Numbers cannot always make the same number of spaces on the left and right, so in such cases there will be 1 more on the right
             cout << " ";
         }
         for(int ryadki=0; ryadki < massive[stowp];ryadki++){
