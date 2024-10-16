@@ -4,25 +4,25 @@ using namespace std;
 
 int main()
 {
-    int massive[20] = {0};
-    int real_mas = 20, max = 0;
-    for (int nomer=0;nomer<20;nomer++) {
-        cout << "Enter " << nomer+1 << " value:";
-        cin >> massive[nomer];
-        if (massive[nomer] == 0){
-            real_mas = nomer;
+    int massif[20] = {0};
+    int real_massif = 20, max = 0;
+    for (int number=0;number<20;number++) {
+        cout << "Enter " << number+1 << " value:";
+        cin >> massif[number];
+        if (massif[number] == 0){
+            real_massif = number;
             break;}
-        if (massive[nomer] > max)
+        if (massif[number] > max)
         {
-            max = massive[nomer];
+            max = massif[number];
         }
     }
     cout << endl;
-    for (int stowp=0;stowp<real_mas;stowp++){
-        for (int propysk=0;propysk<(max-massive[stowp])/2;propysk++){ //Numbers cannot always make the same number of spaces on the left and right, so in such cases there will be 1 more on the right
+    for (int columns=0;columns<real_massif;columns++){
+        for (int space=0;space<(max-massif[columns])/2;space++){ //Numbers cannot always make the same number of spaces on the left and right, so in such cases there will be 1 more on the right
             cout << " ";
         }
-        for(int ryadki=0; ryadki < massive[stowp];ryadki++){
+        for(int lines=0; lines < massif[columns];lines++){
             cout << "*";
         }
         cout << "\n";
