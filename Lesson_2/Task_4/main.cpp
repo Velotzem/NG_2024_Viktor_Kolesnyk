@@ -7,14 +7,14 @@ int main() {
     string text; int count[128] = {0}; //A larger array could be used here, but I'm not using Windows 1251
     cout << "Enter a string: ";
     getline(cin, text);
-    for (int nomer_elem_mas = 0; nomer_elem_mas < text.length(); nomer_elem_mas++) {
-        char nomer_elem_mas_count = text[nomer_elem_mas];
-        count[(int)nomer_elem_mas_count]++;
+    for (int array_element_number = 0;array_element_number < text.length();array_element_number++) {
+        char array_element_number_count = text[array_element_number];
+        count[(int)array_element_number_count]++;
     }
     cout << "Number of different characters:\n";
-    for (int nomer_elem_mas_out = 0; nomer_elem_mas_out < 128; ++nomer_elem_mas_out) {
-        if (count[nomer_elem_mas_out] > 0) {
-            cout << (char)nomer_elem_mas_out << ": " << count[nomer_elem_mas_out] << "\n";
+    for (int array_element_number_out = 0;array_element_number_out < 128;array_element_number_out++) {
+        if (count[array_element_number_out] > 0) {
+            cout << (char)array_element_number_out << ": " << count[array_element_number_out] << "\n";
         }
     }
     return 0;
