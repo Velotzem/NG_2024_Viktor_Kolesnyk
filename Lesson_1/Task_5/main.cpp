@@ -4,20 +4,23 @@ using namespace std;
 
 int main()
 {
-    int kilkist = 0;
-    cout << "Enter a number that will be equal to the number of rows of the Christmas tree" << endl;
-    cin >> kilkist;
-    for(int stowpci=0; stowpci<kilkist; stowpci++){
-        for(int vidstyp=1; vidstyp<kilkist-stowpci;vidstyp++){
-            cout << " ";}
-        for(int ryadki=1; ryadki<=2*(stowpci+1)-1;ryadki++){
-            cout << "*";}
-        cout << "\n";}
-    if(kilkist > 1) {
-        int nishka=1;
-        while(nishka<kilkist){ //Used "while" instead of "for" for variety
-            cout << " ";
-            nishka++;}
-        cout << "*\n";}
+    int amount = 0;
+    cout << "Enter the number of rows for the Christmas tree" << endl;
+    cin >> amount;
+    for(int columns = 0; columns < amount; columns++){
+        for(int indentation = 0; indentation < amount + columns; indentation++){
+            if(indentation < amount - columns - 1) {
+                cout << " ";
+            }
+            else {
+                cout << "*";
+            }
+        }
+        cout << "\n";
+    }
+    for(int trunk = 0; trunk < amount - 1; trunk++){
+        cout << " ";
+    }
+    cout << "*\n";
     return 0;
 }
