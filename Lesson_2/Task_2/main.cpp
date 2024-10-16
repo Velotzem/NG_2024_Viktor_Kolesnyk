@@ -1,22 +1,23 @@
 #include <iostream>
+
 using namespace std;
+
 int main()
 {
-    int massive[5] = {0};
+    int massif[5] = {0};
     int max = 0;
-    for (int nomer=0;nomer<5;nomer++) {
-        cout << "Enter " << nomer+1 << " value:";
-        cin >> massive[nomer];
-        if (massive[nomer] > max)
+    for (int number=0;number<5;number++) {
+        cout << "Enter " << number+1 << " value:";
+        cin >> massif[number];
+        if (massif[number] > max)
         {
-            max = massive[nomer];
+            max = massif[number];
         }
     }
     cout << endl << endl;
-    for (int stowp=0;stowp<max;stowp++){
-        int znach_dlya_propysky=stowp;
-        for(int ryadki=0; ryadki < 5 ;ryadki++){
-            if (massive[ryadki]>znach_dlya_propysky){
+    for (int columns=0;columns<max;columns++){
+        for(int lines=0; lines < 5 ;lines++){
+            if (massif[lines]>columns){
                 cout << "*";
             }
             else {
