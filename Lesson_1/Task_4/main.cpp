@@ -14,9 +14,9 @@ int main()
         if (salary < 1000000) {
             cout << "You are well done!" << endl;
         }
-    }
-    else if (salary > 999999){
-        cout << "You are a millionaire!" << endl;
+        else if (salary > 999999){
+            cout << "You are a millionaire!" << endl;
+        }
     }
     return 0;
 }
