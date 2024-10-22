@@ -10,11 +10,11 @@ int main()
     if (salary < 1000) {
         cout << "You should work harder!" << endl;
     }
-    else if (salary > 999) {
+    if (salary > 999) {
         if (salary < 1000000) {
             cout << "You are well done!" << endl;
         }
-        else if (salary > 999999){
+        if (salary > 999999){
             cout << "You are a millionaire!" << endl;
         }
     }
