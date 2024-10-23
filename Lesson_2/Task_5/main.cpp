@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    const int max_length_text = 256;
+    const int max_length_text = 500; //set the size of the string
     char text[max_length_text] = {0};
     int count_all_alphabetic_characters = 0, word_count = 0;
     cout << "Enter a string: ";
