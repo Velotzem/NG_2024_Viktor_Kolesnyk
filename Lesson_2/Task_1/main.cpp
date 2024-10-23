@@ -4,14 +4,15 @@ using namespace std;
 
 int main()
 {
-    int massif[5] = {0};
-    for (int number=0;number<5;number++) {
-        cout << "Enter " << number+1 << " value:" << endl;
-        cin >> massif[number];
+    const int size_massif = 5; //It is enough to change the size of the array so that there is no comma at the end
+    int massif[size_massif] = {0};
+    for (int point_number=0;point_number<5;point_number++) {
+        cout << "Enter " << point_number+1 << " value:" << endl;
+        cin >> massif[point_number];
     }
-    for (int number2=0;number2<5;number2++) {
-        cout << massif[number2];
-        if (number2<4) {
+    for (int number=0;number<size_massif;number++) {
+        cout << massif[number];
+        if (number<size_massif-1) {
             cout << ", ";
         }
     }
