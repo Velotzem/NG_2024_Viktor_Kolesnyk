@@ -1,21 +1,23 @@
 #include <iostream>
-#include <string>
 
 using namespace std;
 
 int main() {
-    string text; int count[128] = {0}; //A larger array could be used here, but I'm not using Windows 1251
+    const int max_length_text = 500; //set the size of the string
+    char text[max_length_text] = {0};
+    int count[128] = {0}; //a larger array could be used here, but I'm not using Windows 1251
     cout << "Enter a string: ";
-    getline(cin, text);
-    for (int array_element_number = 0;array_element_number < text.length();array_element_number++) {
-        char array_element_number_count = text[array_element_number];
-        count[(int)array_element_number_count]++;
+    cin.getline(text, max_length_text);
+    for (int array_element_number = 0;array_element_number < strlen(text);array_element_number++) { //it writes in the array count +1 to the value of the numerical values ​​of the char characters
+        count[(int)text[array_element_number]]++;
     }
     cout << "Number of different characters:\n";
-    for (int array_element_number_out = 0;array_element_number_out < 128;array_element_number_out++) {
-        if (count[array_element_number_out] > 0) {
+    int array_element_number_out = 0;
+    while(array_element_number_out < 128) {
+        if (count[array_element_number_out]) { //output only those characters whose count > 0
             cout << (char)array_element_number_out << ": " << count[array_element_number_out] << "\n";
         }
+        array_element_number_out++;
     }
     return 0;
 }
