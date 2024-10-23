@@ -1,25 +1,25 @@
 #include <iostream>
-#include <string>
 
 using namespace std;
 
 int main() {
-    string text;
-    int count = 0;
-    int real_count = 0;
+    const int max_length_text = 256;
+    char text[max_length_text] = {0};
+    int count_all_alphabetic_characters = 0, word_count = 0;
     cout << "Enter a string: ";
-    getline(cin, text);
-    for (int array_el_num = 0; array_el_num < text.length(); array_el_num++) {
-        if((text[array_el_num] > 64 && text[array_el_num] < 91) || (text[array_el_num] > 96 && text[array_el_num] < 123)){
-            count += 1;
-            if(count == 1){ //Since count is reset to 0 with other symbols, count = 1 only once in the word and adds 1 to the counter
-                real_count += count;
+    cin.getline(text, max_length_text);
+    for (int array_element_number = 0; array_element_number < strlen(text); array_element_number++) {
+        if((text[array_element_number] > 64 && text[array_element_number] < 91)
+            || (text[array_element_number] > 96 && text[array_element_number] < 123)){
+            count_all_alphabetic_characters += 1;
+            if(count_all_alphabetic_characters == 1){ //count_all_alphabetic_characterst = 1 only once in the word and adds 1 to the word_count
+                word_count += count_all_alphabetic_characters;
             }
         }
         else{
-            count = 0;
+            count_all_alphabetic_characters = 0;
         }
     }
-    cout << real_count << " : the number of words in the string."<< endl;
+    cout << word_count << " : the number of words in the string."<< endl;
     return 0;
 }
