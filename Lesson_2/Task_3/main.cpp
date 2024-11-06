@@ -26,6 +26,6 @@ int main()
         for(int lines = 0; lines < massif[columns];lines++){
             cout << "*";
         }
-        cout << "\n";
+        cout << endl;
     }
 }
